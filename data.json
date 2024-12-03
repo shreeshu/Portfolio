@@ -1,0 +1,46 @@
+{
+    "name": "Shreeshma Danesh",
+    "skills": ["Python", "Generative AI", "SQL", "HTML", "JavaScript", "UI/UX", "Figma"],
+    "certifications": [
+        "Career Essentials in Generative AI by Microsoft and LinkedIn",
+        "Python for AIML Program",
+        "Advanced Artificial Intelligence and Machine Learning Applications",
+        "Basics of Cryptocurrency",
+        "Data Analytics & Visualization",
+        "ITIL Certification"
+    ],
+    "awards": [
+        "Completed 16+ tasks in Google Code-In",
+        "Silver medal in abacus",
+        "First rank in Hindi exam",
+        "First prize in intra-school English speech competition",
+        "Third prize in an inter-school English essay competition"
+    ],
+    "projects": [
+        {
+            "name": "Falcon AI Assistant",
+            "description": "An AI assistant built with Python.",
+            "link": "https://github.com/your-repo/falcon-ai"
+        },
+        {
+            "name": "Harry Potter Invisibility Cloak",
+            "description": "A Python project using OpenCV for cloaking.",
+            "link": "https://github.com/your-repo/invisibility-cloak"
+        },
+        {
+            "name": "Face Detection System",
+            "description": "A Python-based face detection system.",
+            "link": "https://github.com/your-repo/face-detection"
+        },
+        {
+            "name": "Pacman Game",
+            "description": "A classic game developed in Python.",
+            "link": "https://github.com/your-repo/pacman"
+        },
+        {
+            "name": "Temperature Monitoring System",
+            "description": "Built using Arduino UNO to monitor temperature.",
+            "link": "https://github.com/your-repo/temperature-monitor"
+        }
+    ]
+}

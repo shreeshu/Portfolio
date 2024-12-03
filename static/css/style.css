@@ -1,0 +1,446 @@
+/* Default Background (Light Mode) */
+body {
+    background-image: url('/static/images/light-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background-image 0.5s ease-in-out;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Dark Mode Background */
+body.dark-mode {
+    background-image: url('/static/images/dark-bg.jpg');
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #add8e6;
+    color: black;
+}
+
+/* Navigation Bar Links */
+nav {
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode hover effect */
+body:not(.dark-mode) nav ul li a:hover {
+    box-shadow: 0 0 10px 3px #FFF4BC; /* Pastel yellow for light mode */
+    color: white;
+}
+
+/* Dark mode hover effect */
+body.dark-mode nav ul li a:hover {
+    box-shadow: 0 0 10px 3px #add8e6; /* Light blue for dark mode */
+    color: white;
+}
+
+/* Adjust sections so content doesn't get hidden under the fixed navbar */
+section {
+    padding: 30px;
+    margin: 50px auto 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light translucent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: background-color 0.3s ease;
+}
+
+section:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slight highlight on hover */
+}
+
+/* Styling the List Items (Skills, Certifications) */
+section ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+section ul li {
+    position: relative;
+    margin: 10px 0;
+    padding-left: 30px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+section ul li::before {
+    content: '🌟';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #add8e6;
+    font-size: 1.5rem;
+}
+
+.project-card {
+    border: 2px solid white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background-color: #FFF4BC;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Light/Dark Mode Toggle Button Position */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Icon Styles */
+.icon {
+    position: absolute;
+    font-size: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.sun {
+    left: 8px;
+    color: #f39c12;
+    opacity: 1;
+}
+
+.moon {
+    right: 8px;
+    color: #f1c40f;
+    opacity: 0;
+}
+
+input:checked + .slider {
+    background-color: #555;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+input:checked + .slider .sun {
+    opacity: 0;
+}
+
+input:checked + .slider .moon {
+    opacity: 1;
+}
+
+/* Social Icons */
+.social-icons {
+    position: relative;
+    z-index: 2;
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+
+
+/* Adding a Cool Glow Effect for Icons */
+.social-icons img {
+    width: 35px;
+    height: auto;
+    max-height: 35px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #add8e6; /* Soft glow effect */
+}
+
+/* Main Section - Adjust for fixed navigation */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding-top: 80px; /* Added space at the top to avoid overlap with fixed navbar */
+}
+
+.main-section h1 {
+    font-size: 3rem; /* Adjust the size to your preference */
+    font-weight: bold;
+    margin: 0.5rem 0; /* Add spacing between text */
+}
+
+.main-section p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem; /* Space between text and the button */
+}
+
+.main-section .more-button {
+    color: black;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.more-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gif-icon {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.more-button:hover .gif-icon {
+    transform: scale(1.2);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Adjust styles for the about-me section */
+#about-me {
+    background: none; /* No background */
+    padding: 0; /* No padding */
+    border: none; /* No border */
+    text-align: center;
+    box-shadow: none; /* Remove any shadow if present */
+}
+
+#about-me h2 {
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    margin-bottom: 20px;
+    display: inline-block; /* Keep the underline effect aligned with the text */
+}
+
+#about-me h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Position the underline closer to the text */
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+#about-me h2:hover::after {
+    width: 100%; /* Underline expands on hover */
+}
+
+/* About Me Paragraphs - Text styling */
+#about-me p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white; /* White text color */
+    margin-top: 20px;
+    text-align: justify;
+}
+
+#emoji {
+    font-size: 40px;  /* Adjust the emoji size */
+}
+
+/* Section Titles and Content */
+h2, p {
+    color: white;
+}
+
+/* Fun Decorations for Paragraphs */
+section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white; /* White color for text in dark mode */
+    text-align: justify;
+}
+
+/* Light Mode */
+body {
+    background-image: url('/static/images/light-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white; /* Default text color for light mode */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-image: url('/static/images/dark-bg.jpg');
+    color: white; /* Default text color for dark mode */
+}
+
+/* Section Titles and Content in Dark Mode */
+body.dark-mode section h2,
+body.dark-mode section p,
+body.dark-mode section li {
+    color: white; /* White color for section titles and content in dark mode */
+}
+
+/* Fun Decorations for Section Titles */
+section h2 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 4px;
+    background-color: white; /* Add a line under the title */
+    transition: width 0.3s ease-in-out;
+}
+
+section h2:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+/* Light Mode and Dark Mode Color Variables */
+:root {
+    --light-glow: #FFF4BC;  /* Light mode glow color */
+    --dark-glow: #ADD8E6;   /* Dark mode glow color */
+}
+
+/* Light Mode (Default) */
+body:not(.dark-mode) {
+    --current-glow: var(--light-glow);  /* Default light mode glow */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --current-glow: var(--dark-glow);  /* Dark mode glow color */
+}
+
+/* Continuous Floating Effect */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);  /* Move up */
+    }
+    100% {
+        transform: translateY(0);  /* Return to original position */
+    }
+}
+
+/* Glowing Text Effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px var(--current-glow), 0 0 10px var(--current-glow), 0 0 15px var(--current-glow);
+    }
+    50% {
+        text-shadow: 0 0 10px var(--current-glow), 0 0 20px var(--current-glow), 0 0 30px var(--current-glow);
+    }
+    100% {
+        text-shadow: 0 0 5px var(--current-glow), 0 0 10px var(--current-glow), 0 0 15px var(--current-glow);
+    }
+}
+
+/* Apply floating effect and glowing effect to h1 and p */
+.main-section h1, .main-section p {
+    animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+}
+
+/* Adjust the animation delays for each */
+.main-section h1 {
+    animation-delay: 0s;
+}
+
+.main-section p {
+    animation-delay: 1s; /* Delay for the paragraph */
+}
