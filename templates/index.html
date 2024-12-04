@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World!</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -16,6 +17,16 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- Popup Card -->
+    <div id="contact-popup" class="popup-card">
+        <button class="close-btn" onclick="togglePopup()">✖</button>
+        <!-- <h2 id="contact-heading" style="font-family: 'Playfair Display', serif;">Contact Me</h2> -->
+        <h2 id="contact-heading">Contact Me</h2>
+        <p>Email: <a href="mailto:shreeshu05@gmail.com">shreeshu05@gmail.com</a></p>
+    </div>
+
+    <div class="popup-overlay" onclick="togglePopup()"></div>
 
     <!-- Light/Dark Mode Toggle -->
     <div class="theme-toggle">
@@ -129,6 +140,29 @@
             }
         });
     </script>
+
+    <script>
+        function togglePopup() {
+            const popup = document.getElementById('contact-popup');
+            const overlay = document.querySelector('.popup-overlay');
+
+            // Toggle display property
+            if (popup.style.display === 'block') {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            } else {
+                popup.style.display = 'block';
+                overlay.style.display = 'block';
+            }
+        }
+
+        // Attach event listener to "Contact" link
+        document.querySelector('nav ul li a[href="#contact"]').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            togglePopup();
+        });
+    </script>
+
         
 </body>
 </html>

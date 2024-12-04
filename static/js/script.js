@@ -27,3 +27,40 @@ document.querySelector(".more-button").addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+  updateContactHeading();
+}
+
+// Function to update the "Contact Me" text and color dynamically
+function updateContactHeading() {
+  const heading = document.getElementById("contact-heading");
+  if (document.body.classList.contains("dark-mode")) {
+    heading.textContent = "Contact Me";
+    heading.style.color = "white"; // White for dark mode
+  } else {
+    heading.textContent = "Contact Me";
+    heading.style.color = "white"; // Black for light mode
+  }
+}
+
+// Initialize the correct heading on page load
+window.onload = updateContactHeading;
+
+// Function to toggle the popup card visibility
+function togglePopup() {
+  const popup = document.getElementById("contact-popup");
+  const overlay = document.querySelector(".popup-overlay");
+
+  if (popup.classList.contains("show")) {
+    // Hide the popup with a fade-out effect
+    popup.classList.remove("show");
+    overlay.style.display = "none";
+  } else {
+    // Show the popup with fade-in and scale-up effect
+    popup.classList.add("show");
+    overlay.style.display = "block";
+  }
+}
