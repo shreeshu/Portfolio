@@ -54,15 +54,7 @@
         <p>Welcome to my portfolio! I'm Shreeshma, passionate about Python, Generative AI, and software engineering. Feel free to explore my skills, projects, and achievements below.</p>
     </section>
 
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/shreeshmad" target="_blank">
-            <img src="/static/images/linkedin-icon.png" alt="LinkedIn">
-        </a>
-        <a href="https://github.com/shreeshu" target="_blank">
-            <img src="/static/images/github-icon.png" alt="GitHub">
-        </a>
-    </div>
-
+    
     <main>
         <!-- Skills Section -->
         <section id="skills">
@@ -73,7 +65,7 @@
                 {% endfor %}
             </ul>
         </section>
-
+        
         <!-- Certifications Section -->
         <section id="certifications">
             <h2>Certifications</h2>
@@ -93,7 +85,7 @@
                 {% endfor %}
             </ul>
         </section>
-
+        
         <!-- Projects Section -->
         <section id="projects">
             <h2>Projects</h2>
@@ -108,11 +100,20 @@
             </div>
         </section>
     </main>
-
+    
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/shreeshmad" target="_blank">
+            <img src="/static/images/linkedin-icon.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/shreeshu" target="_blank">
+            <img src="/static/images/github-icon.png" alt="GitHub">
+        </a>
+    </div>
+    
     <footer>
         <p>© {{ data.name }}'s Portfolio</p>
     </footer>
-
+    
     <script src="/static/js/script.js"></script>
     <script>
         const toggle = document.getElementById("theme-switch");
@@ -141,7 +142,7 @@
         });
     </script>
 
-    <script>
+<script>
         function togglePopup() {
             const popup = document.getElementById('contact-popup');
             const overlay = document.querySelector('.popup-overlay');
@@ -155,7 +156,7 @@
                 overlay.style.display = 'block';
             }
         }
-
+        
         // Attach event listener to "Contact" link
         document.querySelector('nav ul li a[href="#contact"]').addEventListener('click', function (e) {
             e.preventDefault(); // Prevent default anchor behavior
