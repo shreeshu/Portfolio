@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Popup Card -->
+    <div id="contact-popup" class="popup-card">
+        <button class="close-btn" onclick="togglePopup()">✖</button>
+        <!-- <h2 id="contact-heading" style="font-family: 'Playfair Display', serif;">Contact Me</h2> -->
+        <h2 id="contact-heading">Contact Me</h2>
+        <p>Email: <a href="mailto:shreeshu05@gmail.com">shreeshu05@gmail.com</a></p>
+    </div>
+
+    <div class="popup-overlay" onclick="togglePopup()"></div>
+
+    <!-- Light/Dark Mode Toggle -->
+    <div class="theme-toggle">
+        <label class="switch">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider">
+                <span class="icon sun">☀️</span>
+                <span class="icon moon">🌙</span>
+            </span>
+        </label>
+    </div>
+
+    <div class="main-section">
+        <h1>Hello, World! <span id="emoji">☀️</span> <br> I'm Shreeshma aka Shreeshu</h1>
+        <p>Computer Science Engineer | Generative AI Developer</p>
+        <button class="more-button">
+            <a href="#about-me">
+                <img src="/static/images/more-about-me.gif" alt="More About Me" class="gif-icon">
+            </a>
+        </button>
+    </div>        
+
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hi, I'm Shreeshma, a GenAI developer by day, and a dreamer who dives into books and weaves stories by night. With skills in Python, Generative AI, and UI/UX design, I bring ideas to life with a touch of creativity and logic. Also, during my leisure time, I hop into a little bit of photography. Feel free to know more about me below.</p>
+    </section>
+
+    
+    <main>
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                {% for skill in data.skills %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                {% for cert in data.certifications %}
+                <li>{{ cert }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <!-- Awards Section -->
+        <section id="awards">
+            <h2>Awards</h2>
+            <ul>
+                {% for award in data.awards %}
+                <li>{{ award }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                {% for project in data.projects %}
+                <div class="project-card">
+                    <h3>{{ project.name }}</h3>
+                    <p>{{ project.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/shreeshmad" target="_blank">
+            <img src="/static/images/linkedin-icon.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/shreeshu" target="_blank">
+            <img src="/static/images/github-icon.png" alt="GitHub">
+        </a>
+        <a href="https://www.behance.net/shreeshmad" target="_blank">
+            <img src="/static/images/behance-icon.png" alt="Behance">
+        </a>
+    </div>
+    
+    <footer>
+        <p>© {{ data.name }}'s Portfolio</p>
+    </footer>
+    
+    <script src="/static/js/script.js"></script>
+    <script>
+        const toggle = document.getElementById("theme-switch");
+        const body = document.body;
+        const emoji = document.getElementById("emoji");
+        
+        // Check for saved theme in localStorage to persist mode
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark-mode");
+            toggle.checked = true;
+            emoji.textContent = "🌙";  // Change to moon emoji
+        } else {
+            emoji.textContent = "🌞";  // Set default to sun emoji
+        }
+        
+        toggle.addEventListener("change", function() {
+            if (this.checked) {
+                body.classList.add("dark-mode");
+                localStorage.setItem("theme", "dark");  // Save the preference
+                emoji.textContent = "🌙";  // Change to moon emoji
+            } else {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("theme", "light");  // Save the preference
+                emoji.textContent = "🌞";  // Change back to sun emoji
+            }
+        });
+    </script>
+
+<script>
+        function togglePopup() {
+            const popup = document.getElementById('contact-popup');
+            const overlay = document.querySelector('.popup-overlay');
+
+            // Toggle display property
+            if (popup.style.display === 'block') {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            } else {
+                popup.style.display = 'block';
+                overlay.style.display = 'block';
+            }
+        }
+        
+        // Attach event listener to "Contact" link
+        document.querySelector('nav ul li a[href="#contact"]').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            togglePopup();
+        });
+    </script>
+
+        
+</body>
+</html>
