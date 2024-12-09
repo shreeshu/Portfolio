@@ -19,28 +19,23 @@
     "projects": [
         {
             "name": "Falcon AI Assistant",
-            "description": "An AI assistant built with Python.",
-            "link": "https://github.com/your-repo/falcon-ai"
+            "description": "Falcon is an advanced AI-powered desktop assistant built using Python, Sapi5, and SpeechRecognition technologies. Unlike Microsoft's Cortana, Falcon boasts superior intelligence and efficiency. This digital assistant seamlessly handles tasks like sending texts on Whatsapp, playing music on Spotify, and much more. With Falcon, users can experience heightened productivity and streamlined operations, making it an ideal addition to any desktop setup."
         },
         {
             "name": "Harry Potter Invisibility Cloak",
-            "description": "A Python project using OpenCV for cloaking.",
-            "link": "https://github.com/your-repo/invisibility-cloak"
+            "description": "During my endeavor to create the Harry Potter Invisible Cloak program using Python, I achieved a satisfactory output rate of approximately 70% to 80%. The program can be further optimized by tweaking parameters to reduce noise and address other factors that may obstruct it from providing a crystal-clear output."
         },
         {
             "name": "Face Detection System",
-            "description": "A Python-based face detection system.",
-            "link": "https://github.com/your-repo/face-detection"
+            "description": "I had developed a Face Detection System using Python. This system efficiently identified faces and inserted a square box around each head to indicate successful detection. Additionally, it allowed customization options, enabling users to incorporate various details, such as the current date, time, and the number of persons detected, to suit their preferences and requirements."
         },
         {
             "name": "Pacman Game",
-            "description": "A classic game developed in Python.",
-            "link": "https://github.com/your-repo/pacman"
+            "description": "I had successfully developed a Pacman game using Python, which included the flexibility to customize the game according to personal preferences. Users had the option to replace the default Pacman character with their own head or any other desired icons, adding a unique touch to the gaming experience."
         },
         {
             "name": "Temperature Monitoring System",
-            "description": "Built using Arduino UNO to monitor temperature.",
-            "link": "https://github.com/your-repo/temperature-monitor"
+            "description": "I successfully developed an IoT-based Temperature Monitoring System utilizing Arduino UNO. This system effectively detects the current room temperature and presents the data on a laptop screen, optionally accompanied by a graphical representation. This project stands out for its distinctive feature of providing room-specific temperature monitoring, setting it apart from conventional systems that primarily focus on monitoring temperatures in cities, states, or countries."
         }
     ]
 }
