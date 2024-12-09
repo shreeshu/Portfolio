@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World!</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -44,7 +44,7 @@
         <p>Computer Science Engineer | Generative AI Developer</p>
         <button class="more-button">
             <a href="#about-me">
-                <img src="static/images/more-about-me.gif" alt="More About Me" class="gif-icon">
+                <img src="/static/images/more-about-me.gif" alt="More About Me" class="gif-icon">
             </a>
         </button>
     </div>        
@@ -60,9 +60,21 @@
         <section id="skills">
             <h2>Skills</h2>
             <ul>
-                {% for skill in data.skills %}
-                <li>{{ skill }}</li>
-                {% endfor %}
+                
+                <li>Python</li>
+                
+                <li>Generative AI</li>
+                
+                <li>SQL</li>
+                
+                <li>HTML</li>
+                
+                <li>JavaScript</li>
+                
+                <li>UI/UX</li>
+                
+                <li>Figma</li>
+                
             </ul>
         </section>
         
@@ -70,9 +82,19 @@
         <section id="certifications">
             <h2>Certifications</h2>
             <ul>
-                {% for cert in data.certifications %}
-                <li>{{ cert }}</li>
-                {% endfor %}
+                
+                <li>Career Essentials in Generative AI by Microsoft and LinkedIn</li>
+                
+                <li>Python for AIML Program</li>
+                
+                <li>Advanced Artificial Intelligence and Machine Learning Applications</li>
+                
+                <li>Basics of Cryptocurrency</li>
+                
+                <li>Data Analytics &amp; Visualization</li>
+                
+                <li>ITIL Certification</li>
+                
             </ul>
         </section>
 
@@ -80,9 +102,17 @@
         <section id="awards">
             <h2>Awards</h2>
             <ul>
-                {% for award in data.awards %}
-                <li>{{ award }}</li>
-                {% endfor %}
+                
+                <li>Completed 16+ tasks in Google Code-In</li>
+                
+                <li>Silver medal in abacus</li>
+                
+                <li>First rank in Hindi exam</li>
+                
+                <li>First prize in intra-school English speech competition</li>
+                
+                <li>Third prize in an inter-school English essay competition</li>
+                
             </ul>
         </section>
         
@@ -90,33 +120,53 @@
         <section id="projects">
             <h2>Projects</h2>
             <div class="projects-container">
-                {% for project in data.projects %}
+                
                 <div class="project-card">
-                    <h3>{{ project.name }}</h3>
-                    <p>{{ project.description }}</p>
+                    <h3>Falcon AI Assistant</h3>
+                    <p>Falcon is an advanced AI-powered desktop assistant built using Python, Sapi5, and SpeechRecognition technologies. Unlike Microsoft&#39;s Cortana, Falcon boasts superior intelligence and efficiency. This digital assistant seamlessly handles tasks like sending texts on Whatsapp, playing music on Spotify, and much more. With Falcon, users can experience heightened productivity and streamlined operations, making it an ideal addition to any desktop setup.</p>
                 </div>
-                {% endfor %}
+                
+                <div class="project-card">
+                    <h3>Harry Potter Invisibility Cloak</h3>
+                    <p>During my endeavor to create the Harry Potter Invisible Cloak program using Python, I achieved a satisfactory output rate of approximately 70% to 80%. The program can be further optimized by tweaking parameters to reduce noise and address other factors that may obstruct it from providing a crystal-clear output.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Face Detection System</h3>
+                    <p>I had developed a Face Detection System using Python. This system efficiently identified faces and inserted a square box around each head to indicate successful detection. Additionally, it allowed customization options, enabling users to incorporate various details, such as the current date, time, and the number of persons detected, to suit their preferences and requirements.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Pacman Game</h3>
+                    <p>I had successfully developed a Pacman game using Python, which included the flexibility to customize the game according to personal preferences. Users had the option to replace the default Pacman character with their own head or any other desired icons, adding a unique touch to the gaming experience.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Temperature Monitoring System</h3>
+                    <p>I successfully developed an IoT-based Temperature Monitoring System utilizing Arduino UNO. This system effectively detects the current room temperature and presents the data on a laptop screen, optionally accompanied by a graphical representation. This project stands out for its distinctive feature of providing room-specific temperature monitoring, setting it apart from conventional systems that primarily focus on monitoring temperatures in cities, states, or countries.</p>
+                </div>
+                
             </div>
         </section>
     </main>
     
     <div class="social-icons">
         <a href="https://www.linkedin.com/in/shreeshmad" target="_blank">
-            <img src="static/images/linkedin-icon.png" alt="LinkedIn">
+            <img src="/static/images/linkedin-icon.png" alt="LinkedIn">
         </a>
         <a href="https://github.com/shreeshu" target="_blank">
-            <img src="static/images/github-icon.png" alt="GitHub">
+            <img src="/static/images/github-icon.png" alt="GitHub">
         </a>
         <a href="https://www.behance.net/shreeshmad" target="_blank">
-            <img src="static/images/behance-icon.png" alt="Behance">
+            <img src="/static/images/behance-icon.png" alt="Behance">
         </a>
     </div>
     
     <footer>
-        <p>© {{ data.name }}'s Portfolio</p>
+        <p>© Shreeshma Danesh's Portfolio</p>
     </footer>
     
-    <script src="static/js/script.js"></script>
+    <script src="/static/js/script.js"></script>
     <script>
         const toggle = document.getElementById("theme-switch");
         const body = document.body;
